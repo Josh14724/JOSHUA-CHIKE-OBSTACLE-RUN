@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Joshua Chike: Obstacle Run</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game">
+
+    <canvas id="canvas"></canvas>
+
+    <!-- TOP HUD -->
+    <div class="hud">
+      <div class="brand">
+        <div class="logo">JC</div>
+
+        <div>
+          <div class="title">JOSHUA CHIKE</div>
+          <div class="subtitle">OBSTACLE RUN</div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <span>🏆 <b id="score">0</b></span>
+        <span>🪙 <b id="coins">0</b></span>
+        <span>⚡ <b id="speed">1.0x</b></span>
+      </div>
+    </div>
+
+    <!-- START / GAME OVER SCREEN -->
+    <div id="message" class="message">
+
+      <div class="card">
+
+        <div class="big-logo">JC</div>
+
+        <h1>JOSHUA CHIKE</h1>
+
+        <h2>OBSTACLE RUN</h2>
+
+        <p>Swipe ◀ ▶ to change lanes</p>
+        <p>Swipe ▲ or tap to jump</p>
+
+        <button id="startBtn">
+          START RUN
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <button id="leftBtn">◀</button>
+      <button id="jumpBtn">▲</button>
+      <button id="rightBtn">▶</button>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
