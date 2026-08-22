@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #05070c;
+  font-family: Arial, sans-serif;
+  touch-action: none;
+}
+
+#game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* HUD */
+
+.hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 14px 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+
+  background: linear-gradient(
+    #05070ccc,
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* RED JC LOGO */
+
+.logo,
+.big-logo {
+  border-radius: 50%;
+
+  background: #e51b23;
+
+  color: white;
+
+  font-weight: 900;
+
+  display: grid;
+  place-items: center;
+
+  border: 3px solid white;
+
+  box-shadow:
+    0 0 18px #e51b2380;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  font-size: 15px;
+}
+
+.big-logo {
+  width: 84px;
+  height: 84px;
+  font-size: 30px;
+
+  margin: auto;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: .8px;
+}
+
+.subtitle {
+  font-size: 10px;
+  color: #ffb3b3;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.stats {
+  display: flex;
+  gap: 9px;
+  font-size: 12px;
+}
+
+.stats span {
+  padding: 7px 9px;
+
+  border-radius: 12px;
+
+  background: #111723cc;
+
+  border: 1px solid #ffffff20;
+}
+
+/* MESSAGE */
+
+.message {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: #05070caa;
+
+  z-index: 5;
+}
+
+.card {
+  width: min(88%, 390px);
+
+  padding: 28px 22px;
+
+  text-align: center;
+
+  color: white;
+
+  background: #151a25ee;
+
+  border: 1px solid #ffffff25;
+
+  border-radius: 24px;
+
+  box-shadow: 0 20px 60px #000;
+}
+
+.card h1 {
+  font-size: 24px;
+  margin: 14px 0 3px;
+}
+
+.card h2 {
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  color: #ff7777;
+
+  margin: 0 0 20px;
+}
+
+.card p {
+  color: #c9cfdb;
+
+  margin: 8px 0;
+
+  font-size: 14px;
+}
+
+/* BUTTON */
+
+button {
+  border: 0;
+
+  color: white;
+
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+#startBtn {
+  margin-top: 18px;
+
+  padding: 15px 28px;
+
+  border-radius: 14px;
+
+  background: #e51b23;
+
+  font-size: 16px;
+
+  box-shadow: 0 8px 22px #e51b2355;
+}
+
+/* GAME CONTROLS */
+
+.controls {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 18px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  z-index: 3;
+}
+
+.controls button {
+  width: 62px;
+  height: 54px;
+
+  border-radius: 17px;
+
+  background: #151a25cc;
+
+  border: 1px solid #ffffff35;
+
+  font-size: 22px;
+
+  backdrop-filter: blur(8px);
+}
+
+#jumpBtn {
+  background: #e51b23dd;
+}
+
+@media(min-width:700px) {
+
+  .controls {
+    bottom: 28px;
+  }
+
+  .controls button {
+    width: 72px;
+    height: 58px;
+  }
+
+}
